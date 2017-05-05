@@ -1,5 +1,5 @@
 # ReactJS-Basics
-A basic of ReactJS project
+A test project of ReactJS basics
 
 # 操作流程
 
