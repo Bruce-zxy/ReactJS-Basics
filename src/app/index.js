@@ -5,17 +5,33 @@ import { Header } from './components/Header';
 import { Home } from './components/Home';
 
 class App extends React.Component {
+	constructor(props) {
+	  super(props);
+	
+	  this.state = {
+	  	homeLink: "Home",
+	  };
+	}
+	onChangeLinkName(newName){
+		console.log(newName);
+		this.setState({
+			homeLink: newName,
+		});
+	}
 	render() {
 		return (
 			<div className="container">
 				<div className="row">
 					<div className="col-xs-10 col-xs-offset-1">
-						<Header />
+						<Header homeLink={this.state.homeLink} />
 					</div>
 				</div>
 				<div className="row">
 					<div className="col-xs-10 col-xs-offset-1">
-						<Home name={"Max"} initialAge={27} >
+						<Home 
+							name={"Max"} 
+							initialAge={27} 
+							changeLink={this.onChangeLinkName.bind(this)} >
 							<p>This is a paragraph!</p>
 						</Home>
 					</div>
