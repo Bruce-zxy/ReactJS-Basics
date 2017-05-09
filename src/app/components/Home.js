@@ -23,7 +23,6 @@ export class Home extends React.Component {
 	onChangeLink() {
 		let rand = parseInt(Math.random()*4);
 		this.props.changeLink(this.state.homeLink[rand]);
-		console.log(this.state.homeLink, rand);
 	}
 	render() {
 		return (

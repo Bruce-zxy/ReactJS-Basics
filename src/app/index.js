@@ -31,7 +31,7 @@ class App extends React.Component {
 						<Home 
 							name={"Max"} 
 							initialAge={27} 
-							changeLink={this.onChangeLinkName.bind(this)} >
+							changeLink={(newName) => this.onChangeLinkName(newName)} >
 							<p>This is a paragraph!</p>
 						</Home>
 					</div>
