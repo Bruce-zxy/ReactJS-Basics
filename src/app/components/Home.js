@@ -1,4 +1,7 @@
 import React from "react";
+import ReactDOM from 'react-dom';
+
+import { Button } from 'antd';
 
 export class Home extends React.Component {
 	constructor(props) {
@@ -35,6 +38,11 @@ export class Home extends React.Component {
 				<button className="btn btn-primary" onClick={() => this.onMakeOlder()}>Make me older!</button>
 				<hr/>
 				<button className="btn btn-primary" onClick={() => this.onChangeLink()} >Change the Link</button>
+		        <Button type="primary">Primary</Button>
+	            <Button>Default</Button>
+	            <Button type="dashed">Dashed</Button>
+	            <Button type="danger">Danger</Button>
+	            <hr/>
 			</div>
 		)
 	}
